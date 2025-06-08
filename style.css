@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'PvZFont', sans-serif;
+    background-color: #a25f2a;
+    background-image: url('src/background.png');
+    background-size: 100% 100%;
+}
+
+.card {
+    width: 400px;
+    height: 600px;
+    background-image: url('src/card-frame.png');
+    background-size: cover;
+    position: relative;
+    color: black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.plant-image {
+    width: 100%;
+    height: 120px;
+    background-image: url('src/snipervilha.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 34px;
+}
+
+.text-area {
+    width: 320px;
+    height: 230px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: 10px;
+    white-space: pre-wrap;
+}
+
+.cost {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 20px;
+    font-size: 1px;
+    line-height: 1.4;
+}
+
+.page-indicator {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #333;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: 'PvZFont';
+    src: url('src/ContinuumBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
