@@ -1,13 +1,13 @@
 const json = {
-    "seedType": 1241,
-      "name": "<size=42>Luminívora",
-      "introduce": "<size=30><color=black>Dizem que a Luminívora nunca falha como uma legítima planta carnívora, sempre engolindo um prato cheio de zumbis em tempo recorde. Ela até publicou um livro ensinando seus segredos para capturar zumbis: \u0022Balance... balance suavemente, eles gostam quando você balança uma luz bem saborosa na frente deles...\u0022\n— DIONAEA, Luminívora. 'A Arte da Fisgada', Metaphyta Plantae, 2025.</color>\n\n\n\n\n\n\n<<<<<< Página Anterior",
-      "info": "<size=32>Carnívora que usa a luz para atrair inimigos com melhor digestão.\n\n<color=black>Dano: </color><color=#8B0000>Morte instantânea</color>\n<color=black>Digestão: </color><color=#8B0000>40 segundos</color>\n<color=#780072>Especial: </color><color=#8B0000>Cada Nível de Lumos reduz o tempo de digestão em 10 segundos, com um mínimo de 10 segundos. Ao finalizar sua digestão, se não houver zumbis a frente, pode atrair um zumbi próximo de uma fileira adjacente a sua e devorá-lo.</color>\n\n\n\n>>>>>> Próxima Página",
-      "cost": "<size=28>\n\n<color=black>Fórmula de Fusão: </color><color=#8B0000>Carnívora + Planterna</color>"
+    "seedType": 1109,
+    "name": "<size=42>Snipervilha",
+    "introduce": "<size=30><color=black>Admira-se por sua visão aguçada e força robusta, Snipervilha é querido por seus companheiros de Ervilha. No entanto, durante suas marchas de formação, o cano de sua arma frequentemente encontra o caminho para as costas de suas cabeças, criando momentos tensos ao longo do caminho.</color></size>",
+    "info": "<size=32>Atira em zumbis em todo o mapa para causar danos massivos.\n\n<color=black>Dano: </color><color=#8B0000>500 | 3 segundos</color>\n<color=#780072>Especial: </color><color=#8B0000>Dispara na cabeça de um zumbi uma vez a cada 6 disparos, matando instantâneamente zumbis. Pode ser gerados fora da Odisseia por Cevadas ou Trilha Zumbi.</color></size>",
+    "cost": "<size=28>Custo: <color=red>600</color>\nRecarga: <color=#8B0000>7,5 segundos</color>\nDisponível somente no Modo Odisseia.</color></size>"
 };
 
 function parseRichText(text) {
-    const baseSize = -12;
+    const baseSize = -13;
     return text
         .replace(/<size=(\d+)>/g, (_, s) => {
             const totalSize = baseSize + parseInt(s);
