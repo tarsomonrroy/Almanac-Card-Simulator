@@ -8,9 +8,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/src/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/src/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/src/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="/src/site.webmanifest">
 
-    <link rel="stylesheet" href="style.css"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -19,7 +21,17 @@
         <div class="title" id="title"></div>
         <div class="text-area" id="text" onclick="nextPage()"></div>
         <div class="cost" id="cost"></div>
+
+        <div class="controls">
+            <button id="prevPlant">Back</button>
+            <button id="nextPlant">Next</button>
+            <input id="chooseId" type="number" placeholder="Seed ID here..." />
+            <button id="goToId">Search</button>
+        </div>
+
+        <div id="errorMsg" class="hidden">ID not found!</div>
     </div>
+
     <script src="script.js"></script>
 </body>
 
