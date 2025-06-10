@@ -4,16 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Card de Planta - PvZ</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
-    <div class="card" onclick="nextPage()">
+    <div class="card">
         <div class="plant-image"></div>
         <div class="title" id="title"></div>
-        <div class="text-area" id="text"></div>
+        <div class="text-area" id="text" onclick="nextPage()"></div>
         <div class="cost" id="cost"></div>
-        <div class="page-indicator" id="page-indicator"></div>
     </div>
     <script src="script.js"></script>
 </body>
