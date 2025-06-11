@@ -162,6 +162,16 @@ function goToId() {
     }
 }
 
+function errormessage() {
+    const msg = document.getElementById('errorMsg');
+    msg.classList.remove('hidden');
+    msg.classList.add('visible');
+    setTimeout(() => {
+        msg.classList.remove('visible');
+        msg.classList.add('hidden');
+    }, 3000);
+}
+
 // --- Wire-up dos botões ---
 document.getElementById('prevPlant').onclick = prevPlant;
 document.getElementById('nextPlant').onclick = nextPlant;
@@ -178,7 +188,7 @@ document.getElementById('chooseId').addEventListener('keydown', function(event) 
 window.nextPage = nextPage; // para onclick direto na div
 
 // --- Carrega o JSON e inicializa ---
-fetch('LawnStrings.json')
+fetch('../data/LawnStrings.json')
     .then((res) => res.json())
     .then((data) => {
         plants = data.plants;
@@ -189,4 +199,7 @@ fetch('LawnStrings.json')
         currentPlantIndex = foundIndex >= 0 ? foundIndex : 0;
         renderPlant();
     })
-    .catch((err) => console.error('Erro ao carregar JSON:', err));
+    .catch((err) => {
+        console.error('Erro ao carregar JSON:', err);
+        errormessage();
+    });

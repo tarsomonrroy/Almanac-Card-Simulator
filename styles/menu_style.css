@@ -15,7 +15,7 @@ body {
 }
 
 button {
-    background: url('/../src/button.png') no-repeat;
+    background: url('../src/button.png') no-repeat;
     background-size: contain;
     background-position: center;
     border: none;

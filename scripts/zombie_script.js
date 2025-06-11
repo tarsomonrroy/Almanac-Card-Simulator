@@ -143,14 +143,18 @@ function goToId() {
         currentZombieIndex = idx;
         renderZombie();
     } else {
-        const msg = document.getElementById('errorMsg');
-        msg.classList.remove('hidden');
-        msg.classList.add('visible');
-        setTimeout(() => {
-            msg.classList.remove('visible');
-            msg.classList.add('hidden');
-        }, 3000);
+        errormessage();
     }
+}
+
+function errormessage() {
+    const msg = document.getElementById('errorMsg');
+    msg.classList.remove('hidden');
+    msg.classList.add('visible');
+    setTimeout(() => {
+        msg.classList.remove('visible');
+        msg.classList.add('hidden');
+    }, 3000);
 }
 
 // --- Wire-up dos botões ---
@@ -167,7 +171,7 @@ document.getElementById('chooseId').addEventListener('keydown', function(event) 
 window.nextPage = nextPage;
 
 // --- Carregamento do JSON ---
-fetch('ZombieStrings.json')
+fetch('../data/ZombieStrings.json')
     .then((res) => res.json())
     .then((data) => {
         zombies = data.zombies;
@@ -178,4 +182,7 @@ fetch('ZombieStrings.json')
         currentZombieIndex = foundIndex >= 0 ? foundIndex : 0;
         renderZombie();
     })
-    .catch((err) => console.error('Erro ao carregar JSON:', err));
+    .catch((err) => {
+        console.error('Erro ao carregar JSON:', err);
+        errormessage();
+    });
