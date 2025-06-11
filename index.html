@@ -1,38 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <title>Card de Planta - PvZ</title>
+    <title>Almanac Card Preview</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #a25f2a;
+            background-image: url('/src/Almanac.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        
+        .container {
+            width: 1000px;
+        }
+        
+        .title {
+            text-align: center;
+            width: 1000px;
+        }
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/src/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/src/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/src/favicon-16x16.png">
-    <link rel="manifest" href="/src/site.webmanifest">
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            margin: 10px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, background-color 0.3s;
 
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+            margin-left: 100px;
+        }
 
-    <link rel="stylesheet" href="style.css" />
+        .btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .btn.zumbi {
+            background-color: #f44336;
+            margin-left: 500px;
+        }
+
+        .btn.zumbi:hover {
+            background-color: #e53935;
+        }
+    </style>
 </head>
-
 <body>
-    <div class="card">
-        <div class="plant-image"></div>
-        <div class="title" id="title"></div>
-        <div class="text-area" id="text" onclick="nextPage()"></div>
-        <div class="cost" id="cost"></div>
-
-        <div class="controls">
-            <button id="prevPlant">Back</button>
-            <button id="nextPlant">Next</button>
-            <input id="chooseId" type="number" placeholder="Seed ID here..." />
-            <button id="goToId">Search</button>
+    <div class="container">
+        <div class="title">
+            <h1>Almanac Card Preview</h1>
         </div>
-
-        <div id="errorMsg" class="hidden">ID not found!</div>
+        <div class="options">
+            <a href="plants.html" class="btn">Plants</a>
+            <a href="zombies.html" class="btn zumbi">Zombies</a>
+        </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
-
 </html>

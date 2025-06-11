@@ -85,7 +85,8 @@ const costEl = document.getElementById('cost');
 function paginateCurrentPlant() {
     const json = plants[currentPlantIndex];
     const combined = json.info + '\n\n' + json.introduce;
-    const maxH = textArea.clientHeight - 10;
+    const adjustment = 10;
+    const maxH = textArea.clientHeight - adjustment;
 
     const raw = splitStyledText(combined, maxH, textArea);
     const fixed = [];
