@@ -157,6 +157,13 @@ function goToId() {
 document.getElementById('prevPlant').onclick = prevZombie;
 document.getElementById('nextPlant').onclick = nextZombie;
 document.getElementById('goToId').onclick = goToId;
+document.getElementById('chooseId').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        this.blur();
+        goToId();
+    }
+});
 window.nextPage = nextPage;
 
 // --- Carregamento do JSON ---

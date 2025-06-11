@@ -82,14 +82,16 @@ body {
 
 button {
     background: url('/../src/button.png') no-repeat;
-    background-size: 96% 100%;
+    background-size: contain;
+    background-position: center;
+    padding-bottom: 5px;
     border: none;
-    width: 92px;
-    height: 46px;
     cursor: pointer;
     font-size: 20px;
     color: rgb(0, 255, 0);
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    width: 92px;
+    height: 46px;
 
     font-family: 'PvZFont';
     src: url('../src/ContinuumBold.ttf') format('opentype');
@@ -107,6 +109,11 @@ button:active {
 
 #nextPlant {
     margin-left: 150px;
+}
+
+#btnmenu {
+    width: 112px;
+    height: 66px;
 }
 
 #idSearchContainer {
@@ -127,7 +134,9 @@ button:active {
     height: 8px;
     box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.425);
 
-    margin-left: 30px;
+    width: 80px;
+
+    margin-left: 20px;
     margin-top: 20px;
 
     font-family: 'PvZFont';
@@ -137,12 +146,12 @@ button:active {
 }
 
 #chooseId:focus {
-    border-color: #888;
+    border-color: #248a1b;
 }
 
 #errorMsg {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-left: -10px;
     color: red;
     font-weight: bold;
@@ -158,12 +167,6 @@ button:active {
 #errorMsg.hidden {
     opacity: 0;
 }
-
-
-/* Responsive */
-@media (max-width: 768px) {}
-
-@media (min-width: 769px) {}
 
 @font-face {
     font-family: 'PvZFont';

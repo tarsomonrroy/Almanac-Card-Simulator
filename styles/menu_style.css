@@ -1,0 +1,99 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a25f2a;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.controls {
+    width: 80%;
+}
+
+button {
+    background: url('/../src/button.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    font-size: 60px;
+    color: rgb(0, 255, 0);
+    text-shadow: 1px 2px 1px rgb(0, 0, 0);
+    width: 357px;
+    height: 144px;
+
+    font-family: 'PvZFont';
+    src: url('../src/ContinuumBold.ttf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1.03);
+}
+
+@font-face {
+    font-family: 'PvZFont';
+    src: url('../src/ContinuumBold.ttf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Responsive */
+
+@media (max-width: 889px) {
+    body {
+        background-image: url('../src/almanac-mobile.png');
+    }
+    
+    .controls {
+        height: 100px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #btnplant {
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width: 890px) {
+    body {
+        background-image: url('../src/almanac.png');
+    }
+
+    .controls {
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1040px) {
+    #btnplant {
+        margin-left: 60px;
+    }
+
+    #btnzombie {
+        margin-right: 60px;
+    }
+}
+
+@media (min-width: 1280px) {
+    #btnplant {
+        margin-left: 140px;
+    }
+
+    #btnzombie {
+        margin-right: 140px;
+    }
+}

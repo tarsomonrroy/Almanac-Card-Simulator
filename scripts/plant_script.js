@@ -166,6 +166,15 @@ function goToId() {
 document.getElementById('prevPlant').onclick = prevPlant;
 document.getElementById('nextPlant').onclick = nextPlant;
 document.getElementById('goToId').onclick = goToId;
+
+document.getElementById('chooseId').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // previne envio de form, se houver
+        this.blur();
+        goToId();
+    }
+});
+
 window.nextPage = nextPage; // para onclick direto na div
 
 // --- Carrega o JSON e inicializa ---
