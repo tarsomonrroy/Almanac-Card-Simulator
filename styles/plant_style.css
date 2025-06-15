@@ -46,25 +46,27 @@ body {
 }
 
 .text-area {
-    width: 315px;
+    width: 314px;
     height: 235px;
     overflow: hidden;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
     white-space: pre-wrap;
     color: rgb(45, 57, 124);
     line-height: 0.91;
     box-sizing: border-box;
+    transform: scale(1.06, 1);
 }
 
 .cost {
     width: 316px;
     height: 60px;
     margin-top: 5px;
-    margin-left: 10px;
+    margin-left: 20px;
     white-space: pre-wrap;
     color: rgb(45, 57, 124);
     line-height: 0.91;
+    transform: scale(1.06, 1);
 }
 
 .text-area.clickable:hover {

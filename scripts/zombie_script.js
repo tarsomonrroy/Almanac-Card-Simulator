@@ -1,6 +1,6 @@
 // --- Helpers de formatação e paginação ---
 function parseRichText(text) {
-    const baseSize = -13;
+    const baseSize = -15;
     return text
         .replace(/<size=(\d+)>/g, (_, s) => {
             const totalSize = baseSize + parseInt(s);
@@ -82,7 +82,8 @@ const textArea = document.getElementById('text');
 function paginateCurrentZombie() {
     const json = zombies[currentZombieIndex];
     const combined = json.info + '\n\n' + json.introduce;
-    const maxH = textArea.clientHeight - 4;
+    const adjustment = 8;
+    const maxH = textArea.clientHeight - adjustment;
 
     const raw = splitStyledText(combined, maxH, textArea);
     const fixed = [];
@@ -182,7 +183,4 @@ fetch('../data/ZombieStrings.json')
         currentZombieIndex = foundIndex >= 0 ? foundIndex : 0;
         renderZombie();
     })
-    .catch((err) => {
-        console.error('Erro ao carregar JSON:', err);
-        errormessage();
-    });
+    .catch((err) => console.error('Erro ao carregar JSON:', err));

@@ -46,15 +46,16 @@ body {
 }
 
 .text-area {
-    width: 306px;
+    width: 308px;
     height: 198px;
     overflow: hidden;
     margin-top: 10px;
-    margin-left: 15px;
+    margin-left: 23px;
     white-space: pre-wrap;
     color: rgb(45, 57, 124);
     line-height: 0.91;
     box-sizing: border-box;
+    transform: scale(1.04, 1);
 }
 
 .text-area.clickable:hover {

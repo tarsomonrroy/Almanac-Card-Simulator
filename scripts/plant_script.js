@@ -1,6 +1,6 @@
 // --- Helpers de formatação e paginação (iguais aos anteriores) ---
 function parseRichText(text) {
-    const baseSize = -13;
+    const baseSize = -15;
     return text
         .replace(/<size=(\d+)>/g, (_, s) => {
             const totalSize = baseSize + parseInt(s);
@@ -85,7 +85,7 @@ const costEl = document.getElementById('cost');
 function paginateCurrentPlant() {
     const json = plants[currentPlantIndex];
     const combined = json.info + '\n\n' + json.introduce;
-    const adjustment = 10;
+    const adjustment = 14;
     const maxH = textArea.clientHeight - adjustment;
 
     const raw = splitStyledText(combined, maxH, textArea);
@@ -199,7 +199,4 @@ fetch('../data/LawnStrings.json')
         currentPlantIndex = foundIndex >= 0 ? foundIndex : 0;
         renderPlant();
     })
-    .catch((err) => {
-        console.error('Erro ao carregar JSON:', err);
-        errormessage();
-    });
+    .catch((err) => console.error('Erro ao carregar JSON:', err));
